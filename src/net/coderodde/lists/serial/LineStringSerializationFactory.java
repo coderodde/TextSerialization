@@ -14,6 +14,12 @@ import java.util.Scanner;
  */
 public class LineStringSerializationFactory {
 
+    /**
+     * The alias for the new line string.
+     */
+    private static final String ENDL = "\n";
+    
+    // Do not instantiate this class.
     private LineStringSerializationFactory() {}
 
     /**
@@ -43,13 +49,13 @@ public class LineStringSerializationFactory {
         for (E element : collection) {
             String line = serializer.serialize(element);
 
-            if (line.contains("\n")) {
+            if (line.contains(ENDL)) {
                 throw new IllegalArgumentException(
                         "The line serializer may not return the new line " +
                         "character in its output.");
             }
 
-            sb.append(line).append("\n");
+            sb.append(line).append(ENDL);
         }
 
         return sb.toString();
