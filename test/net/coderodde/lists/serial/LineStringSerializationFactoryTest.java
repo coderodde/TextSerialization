@@ -109,7 +109,7 @@ public class LineStringSerializationFactoryTest {
                          .collect(Collectors.toList());
         }
     }
-    
+
     private static Integer asInteger(String value) {
         try {
             return Integer.parseInt(value);

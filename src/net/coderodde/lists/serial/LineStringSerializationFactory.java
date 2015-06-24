@@ -18,7 +18,7 @@ public class LineStringSerializationFactory {
      * The alias for the new line string.
      */
     private static final String ENDL = "\n";
-    
+
     // Do not instantiate this class.
     private LineStringSerializationFactory() {}
 
